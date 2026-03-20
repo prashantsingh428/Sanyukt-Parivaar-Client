@@ -1,0 +1,6 @@
+services:
+  - type: static
+    name: sanyukt-parivaar-client
+    env: static
+    buildCommand: npm install && npm run build
+    publishDir: dist
