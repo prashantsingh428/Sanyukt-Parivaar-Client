@@ -1,0 +1,326 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { ChevronRight, CheckCircle, Users, Target, Eye, TrendingUp, Shield, Star, Heart, Award, MapPin, Phone, Mail, Globe, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+
+const AboutUsPage = () => {
+    const navigate = useNavigate();
+    // Sample image URLs (replace with actual images)
+    const seminarImage = "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+    const teamImage = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+    const trainingImage = "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+
+    // Mission & Vision images
+    const missionImage = "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+    const visionImage = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+
+    // Why Sanyukt Parivaar images
+    const familyImage = "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+    const successImage = "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+    const trainingImage2 = "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+    const growthImage = "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2015&q=80";
+
+    // Core Values images
+    const integrityImage = "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80";
+    const teamworkImage = "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80";
+    const customerImage = "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+    const learningImage = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80";
+    const ethicalImage = "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+    const growthValueImage = "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
+
+    const coreValues = [
+        {
+            title: "Integrity & Transparency",
+            traits: ["Honesty", "Reliability", "Accountability", "Diligence"],
+            image: integrityImage
+        },
+        {
+            title: "Teamwork & Unity",
+            traits: ["Collaboration", "Support", "Togetherness", "Cooperation"],
+            image: teamworkImage
+        },
+        {
+            title: "Customer Satisfaction",
+            traits: ["Quality Service", "Responsiveness", "Value Creation", "Trust"],
+            image: customerImage
+        },
+        {
+            title: "Continuous Learning",
+            traits: ["Skill Development", "Innovation", "Adaptability", "Growth"],
+            image: learningImage
+        },
+        {
+            title: "Ethical Direct Selling",
+            traits: ["Fair Practices", "Transparency", "Compliance", "Respect"],
+            image: ethicalImage
+        },
+        {
+            title: "Long-Term Growth",
+            traits: ["Sustainability", "Stability", "Future Focus", "Scaling"],
+            image: growthValueImage
+        }
+    ];
+
+    return (
+        <div className="min-h-screen bg-[#0D0D0D] font-sans text-[#F5E6C8]">
+            {/* Hero Banner Section */}
+            <header className="relative h-[320px] flex items-center justify-center overflow-hidden">
+                <div 
+                    className="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity"
+                    style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')" }}>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/20 via-[#0D0D0D]/60 to-[#0D0D0D]"></div>
+                
+                <div className="relative z-10 text-center px-4">
+                    <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#C8A96A] mb-6 tracking-tight drop-shadow-2xl animate-fade-in">
+                        Our Legacy
+                    </h1>
+                    <div className="flex items-center justify-center text-[#F5E6C8]/60 text-xs font-black uppercase tracking-[0.3em] backdrop-blur-sm bg-white/5 py-3 px-8 rounded-full border border-white/10">
+                        <span onClick={() => navigate('/')} className="hover:text-[#C8A96A] cursor-pointer transition-colors">Vision</span>
+                        <ChevronRight className="w-4 h-4 mx-3 text-[#C8A96A]" />
+                        <span className="text-[#C8A96A]">Our Story</span>
+                    </div>
+                </div>
+            </header>
+
+            {/* Intro Heading Section */}
+            <section className="py-20 md:py-32 px-4 max-w-7xl mx-auto text-center relative">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-[#C8A96A] to-transparent opacity-30"></div>
+                
+                <div className="inline-block mb-6 px-6 py-2 rounded-full border border-[#C8A96A]/20 bg-[#C8A96A]/5">
+                    <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#C8A96A]">Architects of Abundance</span>
+                </div>
+
+                <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#C8A96A] mb-8 leading-tight animate-slide-up">
+                    Welcome to the <br/>
+                    <span className="text-[#F5E6C8]">Sanyukt Parivaar Elite</span>
+                </h2>
+                
+                <p className="text-xl md:text-2xl text-[#F5E6C8]/40 font-serif italic max-w-3xl mx-auto leading-relaxed mb-12">
+                    "A curated collective dedicated to the art of generational wealth and unified growth."
+                </p>
+                
+                <div className="flex items-center justify-center gap-4">
+                    <div className="w-12 h-px bg-gradient-to-r from-transparent to-[#C8A96A]/30"></div>
+                    <div className="w-3 h-3 rotate-45 border border-[#C8A96A]/40"></div>
+                    <div className="w-12 h-px bg-gradient-to-l from-transparent to-[#C8A96A]/30"></div>
+                </div>
+            </section>
+
+            {/* ABOUT US - CONTENT + IMAGE */}
+            <section className="py-24 px-4 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    {/* Left Content */}
+                    <div className="space-y-8 animate-slide-right">
+                        <div className="space-y-6">
+                            <p className="text-[#F5E6C8]/80 leading-relaxed text-lg">
+                                <span className="text-[#C8A96A] font-serif font-bold text-2xl italic mr-2">S</span>anyukt Parivaar & Rich Life Pvt.Ltd. is a rapidly growing direct selling and multi-level marketing organization built on the foundation of trust, transparency, and teamwork.
+                            </p>
+                            <p className="text-[#F5E6C8]/60 leading-relaxed">
+                                At Sanyukt Parivaar, we believe success is best achieved together. Our "Parivaar" culture encourages mutual support, ethical business practices, and long-term relationships. We offer high-quality lifestyle, wellness, personal care, and daily-use products that create real value for customers.
+                            </p>
+                            <p className="text-[#F5E6C8]/60 leading-relaxed">
+                                Through structured training, leadership development, and a proven compensation plan, we help individuals from all walks of life build a stable and scalable business with absolute confidence.
+                            </p>
+                        </div>
+                        
+                        <div className="pt-8 border-t border-[#C8A96A]/10 flex flex-wrap gap-8">
+                            <div className="flex flex-col">
+                                <span className="text-3xl font-serif font-bold text-[#C8A96A]">5k+</span>
+                                <span className="text-[10px] uppercase tracking-widest text-[#F5E6C8]/40 font-bold">Partners</span>
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-3xl font-serif font-bold text-[#C8A96A]">100+</span>
+                                <span className="text-[10px] uppercase tracking-widest text-[#F5E6C8]/40 font-bold">Seminars</span>
+                            </div>
+                            <div className="flex flex-col">
+                                <span className="text-3xl font-serif font-bold text-[#C8A96A]">10+</span>
+                                <span className="text-[10px] uppercase tracking-widest text-[#F5E6C8]/40 font-bold">Regions</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Image */}
+                    <div className="relative animate-slide-left">
+                        <div className="absolute -inset-4 border border-[#C8A96A]/20 rounded-[2rem] -rotate-2"></div>
+                        <div className="relative rounded-[2rem] overflow-hidden shadow-2xl shadow-black">
+                            <img
+                                src={seminarImage}
+                                alt="Company Seminar"
+                                className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+                                loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-60"></div>
+                        </div>
+                        
+                        <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-[#1A1A1A] rounded-3xl border border-[#C8A96A]/20 p-4 shadow-3xl hidden md:block">
+                            <img
+                                src={teamImage}
+                                alt="Team"
+                                className="w-full h-full object-cover rounded-2xl opacity-80"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* MISSION & VISION SECTION */}
+            <section className="py-24 px-4 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    {/* Mission Card */}
+                    <article className="group relative">
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] rounded-[2.5rem] opacity-0 group-hover:opacity-20 transition duration-500 blur"></div>
+                        <div className="relative bg-[#1A1A1A] rounded-[2.5rem] border border-[#C8A96A]/10 p-12 h-full flex flex-col transition-all duration-500 group-hover:border-[#C8A96A]/30">
+                            <div className="w-20 h-20 bg-gradient-to-br from-[#C8A96A] to-[#D4AF37] rounded-3xl flex items-center justify-center mb-8 shadow-xl shadow-gold-900/20 transform group-hover:rotate-6 transition-transform">
+                                <Target className="w-10 h-10 text-[#0D0D0D]" />
+                            </div>
+                            <h3 className="text-3xl font-serif font-bold text-[#C8A96A] mb-6">Ambition</h3>
+                            <p className="text-[#F5E6C8]/60 leading-relaxed text-lg font-medium">
+                                Our mission is to architect a reliable platform for financial independence and personal development. We nurture our elite community through sophisticated training and leadership, maintaining absolute integrity in every transaction.
+                            </p>
+                        </div>
+                    </article>
+
+                    {/* Vision Card */}
+                    <article className="group relative">
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] rounded-[2.5rem] opacity-0 group-hover:opacity-20 transition duration-500 blur"></div>
+                        <div className="relative bg-[#1A1A1A] rounded-[2.5rem] border border-[#C8A96A]/10 p-12 h-full flex flex-col transition-all duration-500 group-hover:border-[#C8A96A]/30">
+                            <div className="w-20 h-20 bg-[#0D0D0D] border border-[#C8A96A]/30 rounded-3xl flex items-center justify-center mb-8 shadow-xl transform group-hover:-rotate-6 transition-transform">
+                                <Eye className="w-10 h-10 text-[#C8A96A]" />
+                            </div>
+                            <h3 className="text-3xl font-serif font-bold text-[#F5E6C8] mb-6">Future</h3>
+                            <p className="text-[#F5E6C8]/60 leading-relaxed text-lg font-medium">
+                                To lead the global direct selling landscape by defining a sustainable lifestyle model. We inspire positive transformation and encourage high-performance entrepreneurship through innovation and responsible legacy-building.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            {/* CORE VALUES SECTION */}
+            <section className="py-24 px-4 max-w-7xl mx-auto relative overflow-hidden">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#C8A96A]/5 rounded-full blur-[120px] -z-10"></div>
+                
+                <h2 className="text-4xl md:text-5xl font-serif font-bold text-center text-[#C8A96A] mb-20 animate-slide-up">
+                    Our Core Principles
+                </h2>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {coreValues.map((value, index) => (
+                        <div
+                            key={index}
+                            className="group bg-[#1A1A1A]/40 backdrop-blur-md rounded-[2.5rem] border border-[#C8A96A]/10 p-8 hover:border-[#C8A96A]/30 transition-all duration-500 shadow-xl overflow-hidden relative"
+                            style={{ animationDelay: `${index * 100}ms` }}
+                        >
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#C8A96A]/5 to-transparent rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-700"></div>
+                            
+                            <div className="relative mb-6">
+                                <div className="w-14 h-14 bg-[#0D0D0D] border border-[#C8A96A]/20 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500 shadow-lg">
+                                    <CheckCircle className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-2xl font-serif font-bold text-[#F5E6C8] group-hover:text-[#C8A96A] transition-colors">{value.title}</h3>
+                            </div>
+
+                            <ul className="space-y-3 relative">
+                                {value.traits.map((trait, traitIndex) => (
+                                    <li key={traitIndex} className="flex items-center gap-3 text-[#F5E6C8]/60 group/trait">
+                                        <div className="w-1 h-1 bg-[#C8A96A] rounded-full opacity-40 group-hover/trait:opacity-100 group-hover/trait:scale-150 transition-all"></div>
+                                        <span className="text-sm font-medium">{trait}</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* Why Sanyukt Parivaar Section */}
+            <section className="py-24 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                        {/* Left Content */}
+                        <div className="space-y-10 animate-slide-right">
+                            <div className="space-y-6">
+                                <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#C8A96A] leading-tight">
+                                    Why Choose the <br/> Elite Collective?
+                                </h2>
+                                <p className="text-[#F5E6C8]/60 leading-relaxed text-lg">
+                                    We are more than a company - we are an ecosystem committed to high-performance empowerment. Our model focuses on stability, recurring prosperity, and leadership-driven legacy.
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div className="flex items-start gap-4 group">
+                                    <div className="w-12 h-12 rounded-2xl bg-[#C8A96A]/10 flex items-center justify-center text-[#C8A96A] group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500">
+                                        <Award className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xl font-serif font-bold text-[#F5E6C8] mb-2 uppercase tracking-wide">Certified Elite</h4>
+                                        <p className="text-sm text-[#F5E6C8]/40 font-medium">Industry-leading training & mentorship.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-4 group">
+                                    <div className="w-12 h-12 rounded-2xl bg-[#C8A96A]/10 flex items-center justify-center text-[#C8A96A] group-hover:bg-[#C8A96A] group-hover:text-[#0D0D0D] transition-all duration-500">
+                                        <Heart className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="text-xl font-serif font-bold text-[#F5E6C8] mb-2 uppercase tracking-wide">Unified Bond</h4>
+                                        <p className="text-sm text-[#F5E6C8]/40 font-medium">A family culture rooted in mutual respect.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Right Content - Stats View */}
+                        <div className="grid grid-cols-2 gap-4 animate-slide-left">
+                            <div className="p-8 bg-[#1A1A1A] rounded-[2.5rem] border border-[#C8A96A]/10 hover:border-[#C8A96A]/30 transition-all duration-500 text-center">
+                                <Users className="w-10 h-10 text-[#C8A96A] mx-auto mb-4 opacity-60" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Empowered</h4>
+                                <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">5,000+ Partners</p>
+                            </div>
+                            <div className="p-8 bg-[#0D0D0D] rounded-[2.5rem] border border-[#C8A96A]/20 hover:border-[#C8A96A] transition-all duration-500 text-center transform translate-y-8">
+                                <Star className="w-10 h-10 text-[#C8A96A] mx-auto mb-4" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Pure</h4>
+                                <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">Natural Line</p>
+                            </div>
+                            <div className="p-8 bg-[#0D0D0D] rounded-[2.5rem] border border-[#C8A96A]/20 hover:border-[#C8A96A] transition-all duration-500 text-center">
+                                <TrendingUp className="w-10 h-10 text-[#C8A96A] mx-auto mb-4" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Growth</h4>
+                                <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">Success Legacy</p>
+                            </div>
+                            <div className="p-8 bg-[#1A1A1A] rounded-[2.5rem] border border-[#C8A96A]/10 hover:border-[#C8A96A]/30 transition-all duration-500 text-center transform translate-y-8">
+                                <Shield className="w-10 h-10 text-[#C8A96A] mx-auto mb-4 opacity-60" />
+                                <h4 className="font-serif font-bold text-[#F5E6C8] text-2xl mb-1">Ethical</h4>
+                                <p className="text-[10px] text-[#C8A96A] font-black uppercase tracking-widest">Transparent Vision</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Final CTA Section */}
+            <section className="py-32 px-4 relative overflow-hidden">
+                <div className="absolute inset-0 bg-[#C8A96A] opacity-5"></div>
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#C8A96A]/30 to-transparent"></div>
+                
+                <div className="max-w-4xl mx-auto text-center relative z-10">
+                    <div className="w-20 h-px bg-[#C8A96A]/40 mx-auto mb-12"></div>
+                    <h2 className="text-4xl md:text-6xl font-serif font-bold text-[#F5E6C8] mb-12 leading-tight">
+                        Begin Your <span className="text-[#C8A96A]">Elite Legacy</span> Today
+                    </h2>
+                    
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => navigate('/register')}
+                        className="group relative inline-flex items-center justify-center px-12 py-5 font-bold text-[#0D0D0D] transition-all duration-300 bg-gradient-to-r from-[#C8A96A] to-[#D4AF37] rounded-full hover:shadow-[0_0_40px_rgba(200,169,106,0.4)]"
+                    >
+                        <span className="relative z-10 uppercase tracking-[0.2em] text-sm">Join the Collective</span>
+                        <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                    </motion.button>
+                </div>
+            </section>
+        </div >
+    );
+};
+
+export default AboutUsPage;
